@@ -242,3 +242,19 @@ d-appendix a, d-appendix a.footnote-backlink { color: var(--global-distill-app-c
 d-appendix a:hover, d-appendix a.footnote-backlink:hover { color: var(--global-hover-color) !important; }
 
 /*# sourceMappingURL=main.css.map */
+
+.outerlist div {
+  padding-left: 0.5cm;
+}
+
+.lonelist div {
+  padding-left: 0.5cm;
+}
+
+.innerlist div {
+  padding-left: 0.5cm;
+}
+
+.listentry div {
+  margin-bottom: 1rem;
+}
