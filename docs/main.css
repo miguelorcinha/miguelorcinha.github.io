@@ -261,6 +261,10 @@ p.description {
   padding-bottom: 0rem;
 }
 
+.figure img {
+  width: 300px;
+}
+
 /* lists */
 ul.lonelist {
   list-style-type: none;
