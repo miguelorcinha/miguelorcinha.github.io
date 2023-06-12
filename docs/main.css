@@ -247,7 +247,13 @@ d-appendix a:hover, d-appendix a.footnote-backlink:hover { color: var(--global-h
 h2.morcinha {
   color:rgba(56, 56, 64, 1);
   font-weight: bold;
-  font-family: Baskervile, serif;
+  font-size: 50px;
+  /* font-family: Baskervile, serif; */
+}
+
+p.summary {
+  margin-bottom: 0.5rem;
+  font-size: 110%;
 }
 
 p.description {
