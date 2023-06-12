@@ -259,6 +259,7 @@ p.description {
 ul.lonelist {
   list-style-type: none;
   /* margin-left: 0.5cm; */
+  margin-top: 0.2rem;
   margin-bottom: 1.5rem;
   padding-left: 0.5cm;
 }
