@@ -281,3 +281,7 @@ li.listentry {
 li.listpaperentry {
   margin-bottom: 0.6rem;
 }
+
+h6.sectiontitle {
+  font-weight: bold;
+}
