@@ -1,12 +1,12 @@
 /******************************************************************************* Variables used throughout the theme. To adjust anything, simply edit the variables below and rebuild the theme. */
 /******************************************************************************* Themes */
-:root { --global-bg-color: #ffffff; --global-code-bg-color: rgba(181, 9, 172, 0.05); --global-text-color: #000000; --global-text-color-light: #828282; --global-theme-color: #0045c4; --global-hover-color: #0045c4; --global-footer-bg-color: #424242; --global-footer-text-color: #e8e8e8; --global-footer-link-color: #ffffff; --global-distill-app-color: #828282; }
+:root { --global-bg-color: #ffffff; --global-code-bg-color: rgba(181, 9, 172, 0.05); --global-text-color: #272727; --global-text-color-light: #828282; --global-theme-color: #0045c4; --global-hover-color: #0045c4; --global-footer-bg-color: #424242; --global-footer-text-color: #e8e8e8; --global-footer-link-color: #ffffff; --global-distill-app-color: #828282; }
 
 :root .fa-sun { display: none; }
 
 :root .fa-moon { padding-left: 10px; padding-top: 12px; display: block; }
 
-html[data-theme='dark'] { --global-bg-color: #424242; --global-code-bg-color: #2c3237; --global-text-color: #e8e8e8; --global-text-color-light: #e8e8e8; --global-theme-color: #2698BA; --global-hover-color: #2698BA; --global-footer-bg-color: #e8e8e8; --global-footer-text-color: #424242; --global-footer-link-color: #000000; --global-distill-app-color: #e8e8e8; }
+html[data-theme='dark'] { --global-bg-color: #424242; --global-code-bg-color: #2c3237; --global-text-color: #e8e8e8; --global-text-color-light: #e8e8e8; --global-theme-color: #2698BA; --global-hover-color: #2698BA; --global-footer-bg-color: #e8e8e8; --global-footer-text-color: #424242; --global-footer-link-color: #272727; --global-distill-app-color: #e8e8e8; }
 
 html[data-theme='dark'] .fa-sun { padding-left: 10px; padding-top: 12px; display: block; }
 
@@ -134,7 +134,7 @@ footer.sticky-bottom { border-top: 1px solid #e8e8e8; padding-top: 40px; padding
 
 .pagination .page-item .page-link { color: var(--global-text-color); }
 
-.pagination .page-item .page-link:hover { color: #000000; }
+.pagination .page-item .page-link:hover { color: #272727; }
 
 .pagination .page-item.active .page-link { color: #ffffff; background-color: var(--global-theme-color); }
 
@@ -148,7 +148,7 @@ footer.sticky-bottom { border-top: 1px solid #e8e8e8; padding-top: 40px; padding
 
 .projects .card img { width: 100%; }
 
-.projects .card .card-title { color: #000000; }
+.projects .card .card-title { color: #272727; }
 
 .projects .card-item { width: auto; margin-bottom: 10px; }
 
