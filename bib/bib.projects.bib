@@ -1,0 +1,208 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Projects: funded research projects and personal projects                 type: @project
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% The narrative of the CV lives here: what the project is (description), what I did
+% (role) and what came out of it (achievements, outputs). Grants point to their
+% project with  project = {<key>}  in bib.grants.bib.
+%
+%   type         = research | personal
+%   date         = period; ongoing: {YYYY-MM/}
+%   institution  = host institution
+%   funder       = funding agency;  grantnumber = its reference
+%   role         = my role
+%   description  = what the project is about / what I worked on (free text)
+%   achievements = results, one per item, separated by " and "  (printed as bullets).
+%                  " and " ALWAYS starts a new item: inside an item write {and}, "\&" or
+%                  rephrase ("A and B" -> "A, B").
+%   outputs      = keys of papers / software / talks that came out of it
+%
+% @project{Key,
+%   title        = {...},
+%   type         = {research},
+%   date         = {2024-04/},
+%   institution  = {...},
+%   funder       = {...},
+%   grantnumber  = {...},
+%   role         = {...},
+%   url          = {https://...},
+%   description  = {...},
+%   achievements = {First result and
+%                   Second result},
+%   outputs      = {Key1, Key2},
+%   keywords     = {ORCINHA}
+% }
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% ------------------------------------------------------------------- research projects
+
+@project{AMS-ASI:2024,
+  title        = {Progetto ASI AMS-02 Missione Scientifica Analisi Dati},
+  type         = {research},
+  date         = {2024-04/},
+  institution  = {Istituto Nazionale di Fisica Nucleare (INFN), Sezione di Perugia},
+  location     = {Perugia, Italy},
+  role         = {Postdoctoral researcher},
+  funder       = {Agenzia Spaziale Italiana (ASI)},
+  grantnumber  = {ASI-INFN 2019-19-HH.0 and amendment No. 2021-43-HH.0},
+  url          = {https://ams02.space/},
+  outputs      = {Pelosi2026, Vaisanen2026, Pelosi2025, Vaisanen2025, PhysRevLett.134.051002,
+                  PhysRevLett.134.051001, AMS:2024idr, pglis:2026, pglis-data:2026},
+  description  = {Development of solar modulation models that accurately describe the temporal
+                  variability of the cosmic-ray flux measured near Earth; the analysis framework
+                  converged into the data-driven forecasting model PgLis. Study of the impact of
+                  cosmic radiation near Earth and in deep space, assessing the dose rates imparted
+                  onto people and instruments in space. Participation in the analysis of the AMS
+                  daily proton and orbital SEP fluxes.},
+  achievements = {Developed the numerical solver of the PgLis model; led its analysis framework (LxPerugia) and
+                  COSPAR Outstanding Paper Award for Young Scientists 2025 for the first paper on the model and
+                  Public release of the model: pglis Python package (PyPI), open data set (Zenodo) and
+                  Tools for the geomagnetic cutoff along any orbit, used for GCR dose estimates (ISS, EVA, CRaTER on LRO)},
+  keywords     = {ORCINHA}
+}
+
+@project{CAESAR:2023,
+  title        = {CAESAR -- Comprehensive spAce wEather Studies for the ASPIS prototype Realization},
+  type         = {research},
+  date         = {2023-04/2024-05},
+  institution  = {Dipartimento di Fisica e Geologia, Università degli Studi di Perugia},
+  location     = {Perugia, Italy},
+  role         = {Researcher},
+  funder       = {Istituto Nazionale di Astrofisica and Agenzia Spaziale Italiana (INAF-ASI)},
+  grantnumber  = {2020-35-HH.0},
+  url          = {https://caesar.iaps.inaf.it/},
+  description  = {Development of the finite-difference solution to the Parker transport equation and
+                  set-up of the LxPerugia analysis framework in which it is integrated.
+                  Interpretation of the cosmic-ray nuclei fluxes with our model, which correlates
+                  the GCR time variability with the solar activity cycle; first steps into how the
+                  cosmic-ray flux is affected by Earth's magnetosphere and how it affects humans in
+                  space.},
+  achievements = {Results presented to the Italian Space Agency (ASI)},
+  keywords     = {ORCINHA}
+}
+
+@project{AMS-FCT:2021,
+  title       = {Collaboration in the International Space Station experiment AMS for the detection
+                 of intermediate energy cosmic rays},
+  type        = {research},
+  date        = {2021/2023},
+  institution = {Laboratório de Instrumentação e Física Experimental de Partículas (LIP)},
+  location    = {Lisbon, Portugal},
+  role        = {Ph.D. student, then researcher},
+  funder      = {Fundação para a Ciência e a Tecnologia (FCT)},
+  grantnumber = {CERN/FIS-PAR/0007/2021},
+  url         = {https://ams02.space/},
+  keywords    = {ORCINHA}
+}
+
+@project{AMS-FCT:2019,
+  title       = {Collaboration in the International Space Station experiment AMS for the detection
+                 of intermediate energy cosmic rays},
+  type        = {research},
+  date        = {2019/2021},
+  institution = {Laboratório de Instrumentação e Física Experimental de Partículas (LIP)},
+  location    = {Lisbon, Portugal},
+  role        = {Ph.D. student},
+  funder      = {Fundação para a Ciência e a Tecnologia (FCT)},
+  grantnumber = {CERN/FIS-PAR/0013/2019},
+  url         = {https://ams02.space/},
+  outputs     = {AMS:2021qln},
+  description = {Spectral variability of the AMS daily proton flux and its interpretation with
+                 spectral analysis: the periodicities present were related to solar activity through
+                 energy-dependent wavelet analysis.},
+  keywords    = {ORCINHA}
+}
+
+@project{AMS-FCT:2017,
+  title       = {Collaboration in the International Space Station experiment AMS for the detection
+                 of intermediate energy cosmic rays},
+  type        = {research},
+  date        = {2017/2019},
+  institution = {Laboratório de Instrumentação e Física Experimental de Partículas (LIP)},
+  location    = {Lisbon, Portugal},
+  role        = {Ph.D. student},
+  funder      = {Fundação para a Ciência e a Tecnologia (FCT)},
+  grantnumber = {CERN/FIS-PAR/0020/2017},
+  url         = {https://ams02.space/},
+  keywords    = {ORCINHA}
+}
+
+@project{AMS-FCT:2011,
+  title       = {Detection of intermediate energy cosmic rays with the AMS experiment},
+  type        = {research},
+  date        = {2011/2014},
+  institution = {Laboratório de Instrumentação e Física Experimental de Partículas (LIP)},
+  location    = {Lisbon, Portugal},
+  role        = {M.Sc. student},
+  funder      = {Fundação para a Ciência e a Tecnologia (FCT)},
+  grantnumber = {PTDC/FIS/122567/2010},
+  url         = {https://ams02.space/},
+  keywords    = {ORCINHA}
+}
+
+% ------------------------------------------------------------------- personal projects
+
+@project{Personal:TorreDoTombo2021,
+  title       = {Web-scraping platform for the Torre do Tombo archive},
+  type        = {personal},
+  date        = {2021-01},
+  role        = {Design and development},
+  url         = {https://digitarq.arquivos.pt/},
+  description = {Web-scraping platform for the publicly available documents of the Torre do Tombo
+                 archive website, for research purposes focused on the Portuguese Inquisition. A
+                 database of all inquisition processes was created, including partial treatment of
+                 bad inputs, linking of split partial entries and some statistical analysis of the
+                 data.},
+  keywords    = {ORCINHA}
+}
+
+@project{Personal:ADCStereo2019,
+  title       = {ADC Stereo -- Analog-to-Digital Converted Stereo},
+  type        = {personal},
+  date        = {2019-09},
+  role        = {Design and development},
+  description = {Wireless playback device (WiFi and Bluetooth) built from an old Denon audio
+                 amplifier and radio receiver. A Raspberry Pi receives audio from AirPlay or
+                 Bluetooth and is controlled manually through the original analog interface,
+                 digitised with an Arduino Uno that talks to the Raspberry Pi over a USB serial
+                 connection; the user can also interact through the LCD display.},
+  keywords    = {ORCINHA}
+}
+
+@project{Personal:ParallelSelection2017,
+  title       = {Parallel selection of protons from AMS cosmic-ray data},
+  type        = {personal},
+  date        = {2017-01},
+  role        = {Design and development},
+  outputs     = {OrcinhaSeminar2018b},
+  description = {Parallelisation algorithm with natural workload balancing to optimise the proton
+                 event selection from AMS cosmic-ray data. Written in C++ with Open MPI for the
+                 parallelisation scheme, using the AMS libraries, custom LIP libraries (file
+                 management and XRootD access) and a selection scheme of my own design.},
+  keywords    = {ORCINHA}
+}
+
+@project{Personal:ArduinoCube2016,
+  title       = {Arduino-based interactive light cube},
+  type        = {personal},
+  date        = {2016-06},
+  role        = {Design and development of the control system},
+  description = {Control system for a graduation project of students of the Faculdade de Belas-Artes
+                 da Universidade de Lisboa: an acrylic cube that glowed and changed colour as people
+                 in the exhibition room came closer or moved away. Ultrasound sensors and an Arduino
+                 controlled the RGB LED strips.},
+  keywords    = {ORCINHA}
+}
+
+@project{Personal:AMU2015,
+  title       = {Front-end board for a silicon photomultiplier -- AMU project},
+  type        = {personal},
+  date        = {2015-05/2019},
+  institution = {Laboratório de Instrumentação e Física Experimental de Partículas (LIP)},
+  role        = {Board design and layout},
+  description = {Design of a front-end circuit board for a silicon photomultiplier for the AMU
+                 (\enquote{A Observar Muões} -- \enquote{Observing Muons}) project at LIP: a 4-layer
+                 board with signal amplification and pre-amplification, analog output, variable
+                 threshold and a digital output in the TTL and NIM standards.},
+  keywords    = {ORCINHA}
+}

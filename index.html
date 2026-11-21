@@ -1,300 +1,77 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Miguel Reis Orcinha · Astroparticle physicist</title>
+  <meta name="description" content="Miguel Reis Orcinha, astroparticle physicist at INFN Perugia and member of the AMS-02 Collaboration. Solar modulation and time variability of galactic cosmic rays.">
 
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- Link previews (LinkedIn, social media, chat apps) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Miguel Reis Orcinha · Astroparticle physicist">
+  <meta property="og:description" content="Miguel Reis Orcinha, astroparticle physicist at INFN Perugia and member of the AMS-02 Collaboration. Solar modulation and time variability of galactic cosmic rays.">
+  <meta property="og:url" content="https://miguelorcinha.github.io/">
+  <meta property="og:image" content="https://miguelorcinha.github.io/images/portrait.jpg">
+  <meta name="twitter:card" content="summary">
 
-    <!-- Styling the website -->
-    <title>Miguel Orcinha</title>
-    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <meta name="theme-color" content="#0b1020">
 
-    <!-- Bootstrap -->
-    <link href="./docs/bootstrap.min.css" rel="stylesheet" integrity="sha512-MoRNloxbStBcD8z3M/2BmnT+rg4IsMxPkXaGh2zD6LGNNFE80W3onsAhRcMAMrSoyWL9xD7Ert0men7vR8LUZg==" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-page="home">
 
-    <!-- Fonts & Icons -->
-    <link rel="stylesheet" type="text/css" href="./docs/css">
-
-    <!-- Styles -->
-    <link rel="stylesheet" href="./docs/main.css">
-  </head>
-
-  <body>
-    <!-- profile pic -->
-    <div class="container mt-5">
-      <div class="profile float-right" style="margin-top: 25px; padding: 0;">
-        <img class="img-fluid z-depth-1 rounded" src="./images/miguel_cropped.png"></img>
-      </div>
-
-      <!-- details -->
-      <h2 class="morcinha">Miguel Reis Orcinha</h2>
-      <p class="summary"><strong>Postdoctoral Fellow at  Istituto Nazionale di Fisica Nucleare (INFN)</strong>,<br/>
-      Member of Alpha Magnetic Spectrometer Collaboration (AMS-02), Member of European Laboratory for Particle Physics (CERN) and Associated Researcher at Laboratório de Instrumentação e Física Experimental de Partículas (LIP)</p>
-
-      <!-- social media -->
-      <span class="social-buttons" style="font-size:12px;">
-        <a href="https://inspirehep.net/literature?sort=mostrecent&size=25&page=1&q=orcinha&ui-citation-summary=true"> <img src="images/inspirehep.jpeg" width="30" height="30" style="padding: 2px;" alt='InspireHEP'></img></a>
-        <a href="https://scholar.google.com/citations?user=Xp7cCeIAAAAJ&hl=pt-PT"> <img src="images/scholar.png" width="30" height="30" alt='Scholar'></img></a>
-        <a href="https://www.twitter.com/m_orcinha"> <img src="images/twitter.png" width="30" height="30" alt='Twitter'></img></a>
-        <a href="https://github.com/miguelorcinha"> <img src="images/github.png" width="30" height="30" alt='Github'></img></a>
-        <a href="https://www.instagram.com/miguel.orcinha/"><img src="images/instagram.png" width="30" height="30" alt="Instagram"></img></a>
-        <a href="files/cv_morcinha_20260811.pdf"><img src="images/cv_logo.png" width="30" height="30" alt="Curriculum Vitae"></img></a>
-      </span>
-
-      <!-- affiliations -->
-        <div style="padding-top: 0.3cm;">
-          <!-- <a href="http://www.fisica.unipg.it/fisgejo/index.php/it/"><img style="height: 70px;" src="images/unipg_logo.svg" alt='UniPG'></img></a> -->
-          <a href="https://www.pg.infn.it/en/infn-perugia-unit-home-page/"><img style="height: 70px;" src="images/INFN_logo_compact.jpeg" alt='INFN'></img></a>
-          <a href="https://ams02.space/"><img style="height: 70px; margin: 0px 10px 0px 10px;" src="images/AMS-02_Logo.png" alt='AMS'></img></a>
-          <a href="https://cern.ch"><img style="height: 70px; margin: 0px 10px 0px 10px;" src="images/cern_logo.png" alt='CERN'></img></a>
-          <a href="https://www.lip.pt/"><img style="height: 60px; margin: 0px 10px 0px 10px;" src="images/lip_logo_compact.png" alt='LIP'></img></a>
+  <!-- ============ HERO ============ -->
+  <header class="hero">
+    <canvas id="sky" aria-hidden="true"></canvas>
+    <div class="inner pad">
+      <div class="bar" id="site-bar"></div>
+      <div class="hero-main">
+        <div class="eyebrow" data-site="eyebrow"></div>
+        <h1 data-site="name"></h1>
+        <p class="lead" id="lead"></p>
+        <div class="cta">
+          <a class="btn primary" href="#research">See my research</a>
+          <a class="btn" href="publications.html">Publications</a>
+          <a class="btn" data-site-href="cv" href="#">Download CV</a>
         </div>
-
-      <hr style="width:100%;text-align:left;margin-left:0"></hr>
-
-      <div class="profile float-right">
-        <img class="img-fluid z-depth-1 rounded" style="padding: 0; padding-bottom: 20px;" src="./images/hcs_rainbow_arrows.png"></img>
       </div>
-      <h4><strong>Research Interests</strong></h4>
-
-      <!-- <p align="justify"> -->
-        <ul class="lonelist">
-          <li class="listentry"><strong>Solar Modulation of Galactic Cosmic Rays</strong></li>
-          <li class="listentry"><strong>Space Radiation Studies and Space Weather Applications</strong></li>
-          <li class="listentry"><strong>Computational Physics</strong></li>
-          <li class="listentry"><strong>Astroparticle Physics</strong></li>
-          <li class="listentry"><strong>Statistics</strong></li>
-        </ul>
-      <!-- </p> -->
-
-      <hr style="width:100%;text-align:left;margin-left:0"></hr>
-
-      <h4><strong>Selected Publications</strong></h4>
-
-      <ul class="lonelist">
-        <li class="listpaperentry"><strong>Evidence for a Time Lag in Solar modulation of galactic cosmic
-        rays</strong> <a href="http://dx.doi.org/10.3847/2041-8213/aa9373"> Article</a><br/>
-        N. Tomassetti, M. Orcinha, F. Barao, B. Bertucci, ApJL, 849 (2017) L32 </li>
-
-        <li class="listpaperentry"><strong>Testing
-        Diffusion of Cosmic Rays in the Heliosphere with Proton and Helium Data from AMS</strong><a href="http://dx.doi.org/10.1103/PhysRevLett.121.251104"> Article</a><br/>
-        N. Tomassetti, F. Barao, B. Bertucci, E. Fiandrini, J. L. Figueiredo, J. B. Lousada, M. Orcinha, Phys. Rev. Lett. 121 (2018) 251104</li>
-
-        <li class="listpaperentry"><strong>Numerical modeling of cosmic-ray transport in the
-        heliopshere and interpretation of proton and helium fluxes in Solar Cycle 24</strong><a href="http://dx.doi.org/10.1016/j.asr.2019.06.025"> Article</a>
-        <br/>
-        N. Tomassetti, F. Barao, B. Bertucci, E. Fiandrini, M. Orcinha, Advances in Space Research 64 (2019)
-        2477-2489</li>
-
-        <li class="listpaperentry"><strong>Periodicities in the Daily Proton Fluxes from 2011 to 2019 Measured by the Alpha Magnetic Spectrometer on the
-        International Space Station from 1 to 100 GV</strong><a href="http://dx.doi.org/10.1103/PhysRevLett.127.271102"> Article</a><br/>
-        M. Aguilar et al. (AMS Collaboration), Phys. Rev. Lett. 127 (2021) 271102</li>
-
-        <li class="listpaperentry"><strong>Observation of Fine Time Structures in the Cosmic Proton and Helium Fluxes
-        with the Alpha Magnetic Spectrometer on the International Space Station</strong><a href="http://dx.doi.org/10.1103/PhysRevLett.121.051101"> Article</a><br/>
-        M. Aguilar et. al. (AMS Collaboration), Phys. Rev. Lett. 121 (2018) 051101</li>
-
-        <li class="listpaperentry"><strong>Observation of a time lag in solar modulation of cosmic rays in the heliosphere</strong><a href="http://dx.doi.org/10.1088/1742-6596/1181/1/012013"> Article</a><br/>
-        M. Orcinha, N. Tomassetti, F. Barão and B. Bertucci, J. Phys.: Conf. Ser. 1181 (2019) 1, 012013, 26th Extended European Cosmic Ray Symposium and 35th Russian Cosmic Ray Conference, Barnaul - Belokurikha - Altai Mountains, Russia, July 6 - 10, (2018)</li>
-      </ul>
-
-      <hr style="width:100%;text-align:left;margin-left:0"></hr>
-
-      <!-- education -->
-      <h4><strong>Education</strong></h4>
-
-      <div class="profile float-right" style="width: 220px; margin: 50px; margin-top: 10px;">
-        <img class="img-fluid z-depth-1" style="padding: 0;" src="./images/IST_A_CMYK_POS.png"></img>
-      </div>
-
-      <!-- PhD -->
-      <h6 class="sectiontitle">Ph.D. in Physics</strong> (Feb 2023)</h6>
-      <ul class="lonelist">
-        <li class="listentry"><strong>Study of solar modulation effects on cosmic ray fluxes measured by the AMS experiment</strong></li>
-        <li  class="listentry">Supervisor: <a href="https://inspirehep.net/authors/1017419">Fernando José de Carvalho Barão</a></li>
-        <li class="listentry">Instituto Superior Técnico, Universidade de Lisboa, Portugal</li>
-        <li class="listentry">Classification: Pass with Distinction</li>
-        <li class="listentry"><a href="https://doi.org/10.17181/63p2h-yx741">Thesis</a></li>
-      </ul>
-
-      <!-- Msc -->
-      <h6 class="sectiontitle">M.Sc. in Engineering Physics</strong> (Nov 2014)</h6>
-      <ul class="lonelist">
-        <li class="listentry"><strong>Solar modulation studies and proton-electron separation with the AMS/RICH detector</strong></li>
-        <li class="listentry">Supervisor: <a href="https://inspirehep.net/authors/1017419">Fernando José de Carvalho Barão</a></li>
-        <li class="listentry">Co-supervisor: <a href="https://inspirehep.net/authors/1511368">Maria Luísa Ferreira da Gama Velho Arruda</a></li>
-        <li class="listentry">Instituto Superior Técnico, Universidade de Lisboa, Portugal</li>
-        <li class="listentry"><a href="files/MasterThesis.MiguelOrcinha.10Nov2014.pdf">Thesis</a></li>
-      </ul>
-
-      <!-- B.Sc. -->
-      <h6 class="sectiontitle">B.Sc. in Engineering Physics</strong> (Sep 2011)</h6>
-      <ul class="lonelist">
-        <li class="listentry">Instituto Superior Técnico, Universidade de Lisboa, Portugal</li>
-      </ul>
-
-      <hr style="width:100%;text-align:left;margin-left:0"></hr>
-
-      <!-- grants -->
-      <h4><strong>Grants</strong></h4>
-
-      <div class="profile float-right" style="width: 220px; margin: 50px; margin-top: 10px;">
-        <img class="img-fluid z-depth-1" style="padding: 0;" src="./images/INFN_logo_compact.jpeg"></img>
-      </div>
-
-      <h6 class="sectiontitle">Assegno di Ricerca (Research Grant)</strong> (Apr 2024 - Apr 2027)</h6>
-      <ul class="lonelist">
-        <li class="listentry"><strong>Studio della radiazione cosmica</strong></li>
-        <li class="listentry">Project: AMS-02 - Missione scientifica e analisi dati</li>
-        <li class="listentry">Funding: Istituto Nazionale di Fisica Nucleare - Sezione di Perugia, Perugia, Italy, ref. 26050/2023. Agreement ASI-INFN 2019-19-HH.0, its amendments. No. 2021-43-HH.0<li>
-        <li class="listentry">Contact persons: <a href="https://inspirehep.net/authors/1016515">B. Bertucci</a>, <a href="https://inspirehep.net/authors/1347338">N. Tomassetti</a>, <a href="https://inspirehep.net/authors/1423826">M. Graziani</a></li>
-      </ul>
-
-      <div class="profile float-right" style="width: 220px; margin: 50px; margin-top: 10px;">
-        <img class="img-fluid z-depth-1" style="padding: 0;" src="./images/unipg_logo.svg"></img>
-      </div>
-
-      <h6 class="sectiontitle">Assegno di Ricerca (Research Grant)</strong> (Apr 2023 - Apr 2024)</h6>
-      <ul class="lonelist">
-        <li class="listentry"><strong>Studio fenomenologico della modulazione solare dei raggi cosmici galattici</strong></li>
-        <li>Project: Comprehensive spAce wEather Studies for the ASPIS Prototype Realization (CAESAR)</li>
-        <li class="listentry">Funding: Dipartimento di Fisica e Geologia, Università degli Studi di Perugia, Perugia, Italy, D.R. 3437 del 13.12.2022, supported by the Italian Space Agency (ASI) and the National Institute for Astrophysics (INAF)</li>
-        <li class="listentry">Contact persons: <a href="https://inspirehep.net/authors/1016515">B. Bertucci</a>, <a href="https://inspirehep.net/authors/1347338">N. Tomassetti</a></li>
-      </ul>
-
-      <h6 class="sectiontitle">Ph.D. Grant</strong> (Mar 2015 - Mar 2019)</h6>
-      <ul class="lonelist">
-        <li class="listentry"><strong>Studio fenomenologico della modulazione solare dei raggi cosmici galattici</strong></li>
-        <li class="listentry">Funding: FCT - Fundação para a Ciência e Tecnologia, Portugal, SFRH/BD/104462/2014</li>
-      </ul>
-
-      <hr style="width:100%;text-align:left;margin-left:0"></hr>
-
-      <!-- grants -->
-      <h4><strong>Awards</strong></h4>
-
-      <h6 class="sectiontitle"><a href="https://cosparhq.cnes.fr/assets/uploads/2026/06/Recipients_Merge-Table_Web.pdf"> COSPAR Outstanding Paper Award for Young Scientists for 2025</a></h6>
-      <ul class="lonelist">
-        <li class="listentry">for the paper entitled "A forecasting framework for galactic cosmic ray flux in space weather applications" in Advances in Space Research, Volume 76, Issue 9, 1 November 2025, Pages 5700-5713, awarded in Jun 2026.</li>
-      </ul>
-
-      <h6 class="sectiontitle">Diploma for Teaching Excellence - Instituto Superior Técnico, Portugal</h6>
-      <ul class="lonelist">
-        <li class="listentry"><strong>2021 / 2022</strong> for Computational Physics</li>
-        <li class="listentry"><strong>2020 / 2021</strong> for Computational Physics</li>
-        <li class="listentry"><strong>2018 / 2019</strong> for Computational Physics</li>
-        <li class="listentry"><strong>2016 / 2017</strong> for Computational Physics</li>
-        <li class="listentry"><strong>2015 / 2016</strong> for Computational Physics</li>
-      </ul>
-
-      <hr style="width:100%;text-align:left;margin-left:0"></hr>
-
-      <!-- Supervision -->
-      <h4><strong>Supervision</strong></h4>
-
-            <!-- supervision DP -->
-      <h6 class="sectiontitle">David Pelosi (Ph.D.) &ldquo; The LxPG Model: A forecasting model for Galactic Cosmic Rays Variability and Orbital Radiation Risk Assessment in Space Missions &rdquo;</h6>
-
-      <!-- listing supervision DP -->
-      <ul class="lonelist">
-        <li>Dottorato di Ricerca in Fisica (Ph.D. in Physics) </li>
-        <li class="listentry">Supervisor: Prof. Dr. Nicola Tomassetti </li>
-        <li class="listentry">Co-supervisor: Dr. Miguel Orcinha </li>
-        <li class="listentry">Defense: TBA </li>
-        <li class="listentry">Università degli Studi di Perugia, Perugia, Italy</li>
-      </ul>
-
-      <!-- supervision MF -->
-      <h6 class="sectiontitle">Margherita Fioroni (M.Sc.) &ldquo; Studio della variabilità dei raggi cosmici a varie scale temporal &rdquo;</h6>
-
-      <!-- listing supervision MF -->
-      <ul class="lonelist">
-        <li>Laurea Magistrale in Fisica (M.Sc. in Physics) </li>
-        <li class="listentry">Supervisor: Prof. Dr. Nicola Tomassetti </li>
-        <li class="listentry">Co-supervisor: Dr. Miguel Orcinha </li>
-        <li class="listentry">Defense: 19 Apr 2024 </li>
-        <li class="listentry">Università degli Studi di Perugia, Perugia, Italy</li>
-      </ul>
-
-      <!-- supervision RP -->
-      <h6 class="sectiontitle">Rafael Parente (B.Sc.) &ldquo; Time Variability of Cosmic Ray Fluxes &rdquo;</h6>
-
-      <!-- listing supervision RP -->
-      <ul class="lonelist">
-        <li>1st Cycle Integrated Project in Engineering Physics - Bologna B.Sc. in Engineering Physics </li>
-        <li class="listentry">Supervisor: Prof. Dr. Fernando Barão </li>
-        <li class="listentry">Co-supervisor: Dr. Miguel Orcinha </li>
-        <li class="listentry">Defense: 23 Jun 2023</li>
-        <li class="listentry">Instituto Superior Técnico, Universidade de Lisboa, Portugal</li>
-      </ul>
-
-      <hr style="width:100%;text-align:left;margin-left:0"></hr>
-
-      <!-- Teaching -->
-      <h4><strong>Teaching</strong></h4>
-
-      <!-- compphys -->
-      <h6 class="sectiontitle">Computational Physics @ Instituto Superior Técnico, Portugal</h6>
-      <p class="description">Laboratory classes for B.Sc. in Physics Engineering:</p>
-
-      <!-- listing compphys -->
-      <ul class="lonelist">
-        <li class="listentry"><strong>Feb 2022 - Jul 2022</strong> as a Teaching Assistant</li>
-        <li class="listentry"><strong>Sep 2021 - Feb 2022</strong> as a Teaching Assistant</li>
-        <li class="listentry"><strong>Sep 2020 - Mar 2021</strong> as a Teaching Assistant</li>
-        <li class="listentry"><strong>Sep 2018 - Feb 2019</strong> as a Teaching Collaborator</li>
-        <li class="listentry"><strong>Sep 2016 - Feb 2017</strong> as a Teaching Collaborator</li>
-        <li class="listentry"><strong>Sep 2015 - Feb 2016</strong> as a Teaching Collaborator</li>
-      </ul>
-
-      <!-- electromag -->
-      <h6 class="sectiontitle">Electromagnetism and Optics @ Instituto Superior Técnico, Portugal</h6>
-      <p class="description">Problem classes for B.Sc. in Industrial Management and Engineering &amp; B.Sc. in Telecommunications and Informatics Engineering:</p>
-      <!-- listing electromag -->
-      <ul class="lonelist">
-        <li class="listentry"><strong>Sep 2020 - Mar 2021</strong> as a Teaching Assistant</li>
-      </ul>
-
-      <!-- electromag -->
-      <h6 class="sectiontitle">Electromagnetism and Optics @ Instituto Superior Técnico, Portugal</h6>
-      <p class="description">Laboratory classes for Bologna B.Sc. Biomedics Engineering &amp; Bologna B.Sc. Applied Mathematics to Computers:</p>
-      <!-- listing electromag -->
-      <ul class="lonelist">
-        <li class="listentry"><strong>Sep 2020 - Mar 2021</strong> as a Teaching Assistant</li>
-      </ul>
-
-      <!-- lfra -->
-      <h6 class="sectiontitle">Laboratory of Radiation and Atomic Physics @ Instituto Superior Técnico, Portugal</h6>
-      <p class="description">Laboratory classes for B.Sc. Physics Engineering:</p>
-      <!--listing lfra -->
-      <ul class="lonelist">
-        <li class="listentry"><strong>Sep 2017 - Feb 2018</strong> as a Teaching Collaborator</li>
-      </ul>
-
-      <!-- lfea -->
-      <div class="profile float-right" style="width: 120px; margin: 50px;">
-        <img class="img-fluid z-depth-1 rounded" style="padding: 0;" src="./images/logo_black.png"></img>
-      </div>
-
-      <h6 class="sectiontitle">Laboratory of Advanced Experimental Physics @ Instituto Superior Técnico, Portugal</h6>
-      <p class="description">Laboratory classes for B.Sc. Physics Engineering:</p>
-      <!--listing lfea -->
-      <ul class="lonelist">
-        <li class="listentry"><strong>May 2021</strong> preparation and guidance of “Cosmic Ray Lab
-          - LIP” set of experiments</li>
-        <li class="listentry"><strong>May 2019</strong> preparation and guidance of “Cosmic Ray Lab
-          - LIP” set of experiments</li>
-        <li class="listentry"><strong>May 2018</strong> preparation and guidance of “Cosmic Ray Lab
-          - LIP” set of experiments</li>
-        <li class="listentry"><strong>May 2017</strong> preparation and guidance of “Cosmic Ray Lab
-          - LIP” set of experiments</li>
-        <li class="listentry"><strong>May 2016</strong> preparation and guidance of “Cosmic Ray Lab
-          - LIP” set of experiments</li>
-      </ul>
-
-      <hr style="width:100%;text-align:left;margin-left:0"></hr>
-      <hr class="invis"></hr>
+      <div class="aff" id="affiliations"></div>
     </div>
-  </body>
+  </header>
+
+  <main>
+    <!-- ============ RESEARCH ============ -->
+    <section class="s pad" id="research">
+      <div class="inner">
+        <h2>Research</h2>
+        <p class="sub" data-site="researchIntro"></p>
+        <div class="tabs" role="tablist" id="tabs" aria-label="Research topics"></div>
+        <div id="panel"></div>
+      </div>
+    </section>
+
+    <!-- ============ RECENT PUBLICATIONS ============ -->
+    <section class="s pad" id="latest">
+      <div class="inner">
+        <div class="shead"><h2>Recent publications</h2><a class="seeall" href="publications.html">All publications →</a></div>
+        <div class="ylist" id="recent"></div>
+        <p class="morelinks"><a class="seeall" href="talks.html">Talks and posters →</a></p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Header bar and footer are filled in by assets/site.js, so they are edited in one place. -->
+  <footer class="pad" id="site-footer"></footer>
+
+  <noscript><p class="pad">This site needs JavaScript to list publications and talks. My CV is at <a href="files/cv_morcinha_20260811.pdf">files/cv_morcinha_20260811.pdf</a>.</p></noscript>
+
+  <script src="content/config.js"></script>
+  <script src="assets/site.js"></script>
+</body>
 </html>
