@@ -19,7 +19,7 @@ window.SITE = {
     "PhD · IST Lisbon"
   ],
 
-  cv: "files/cv_morcinha_20260811.pdf",
+  cv: "files/cv_morcinha_20261112.pdf",
 
   // Profile links shown in the footer and the contact section. Leave url empty to hide one.
   links: [
